@@ -48,3 +48,22 @@ let a = function(){
 }
 
 a();
+
+//Q5 Pass function in another function
+function pass(val){   //function pass is higher order function
+    val();
+}
+pass(function(){
+    console.log("Hey there");
+}) 
+
+//Another way of the higher order function
+function xyz(){         //higher order function which returns another       function
+    return function(){
+        console.log("Hiiiii");
+    }
+}
+
+xyz();
+
+//Higher oder function : Which returns a function or takes the input/val of another function
