@@ -102,3 +102,27 @@ function outer() {
 
   return inner;
 }
+
+//Lexical Scoping
+function abcd(){
+    let a = 12;
+    function defg(){
+        let b = 13;
+        function ghij(){
+            let c = 14;
+        }
+    }
+}
+
+//Hoisting
+
+abcdz();
+ 
+function abcdz(){                     //This will work
+    console.log("Concept of hoisting")
+}
+
+// let abcdz = function(){              //This will not wokr
+//     console.log("Concept of hoisting will fail")
+// }
+    
