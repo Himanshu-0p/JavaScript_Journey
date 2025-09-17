@@ -43,3 +43,62 @@ function abcd(...val){
 }
 
 abcd(1,2,3,4,5,6,7,8,9); 
+
+//Return values
+function ret(val){
+    return 12;
+}
+
+let some = ret();
+console.log(some);
+
+
+//first class function -> functions ko values ki tarah treat kar skate hai
+function abcd1(val){    //abcd1 is a high order function
+    val();   
+}
+abcd1(function (){
+    console.log("Hey function ke andar function");
+})
+
+//Another way is
+function xyz(){
+    return function(){
+        console.log("hooo")
+    };
+}
+xyz()();
+
+//Pure vs Impure function
+let a = 20;
+
+function pure(val){
+    console.log("Pure function");
+}
+
+function impure(val){
+    console.log(++a);
+}
+
+pure(a);
+impure(a);
+
+//Closures-A function that remembers the variables from its outer function, even after the outer function has finished running.
+
+function abcd(){
+    let a = 12;
+    return function(){
+        console.log(a);
+    }
+}
+
+function outer() {
+  let count = 0; // variable in outer function
+
+  function inner() {
+    count++; // inner function uses outer variable
+    return count;
+  }
+
+  return inner;
+}
