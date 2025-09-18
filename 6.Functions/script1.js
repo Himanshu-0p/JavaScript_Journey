@@ -67,3 +67,23 @@ function xyz(){         //higher order function which returns another       func
 xyz();
 
 //Higher oder function : Which returns a function or takes the input/val of another function
+
+//Closure: Ek aisa function jo return kare another function and inner function use kare outer function ki value
+function abcd(){
+    let val = 0;
+    return function(){
+        console.log(val);
+    }
+}
+
+//IFE
+(function init(){
+    console.log("Initialized")
+})
+
+//Output of the following code lines
+greet();
+
+function greet(){
+    console.log("Ky chal raha hai");
+}
