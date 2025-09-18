@@ -23,3 +23,17 @@ let sortarr = arr.sort(function(a,b){
     return a-b;
 });
 
+let arrz = [11,62,3,4,25];
+arrz.forEach(function(val){
+    console.log(val+3);
+})
+
+//Map is used only when u want to make a new array on basis of previous array's data
+let newarrz = arrz.map(function(val){
+    return 12;
+})
+let newarrz1 = arrz.map(function(val){
+    if(val > 10) return 12;
+})
+
+
