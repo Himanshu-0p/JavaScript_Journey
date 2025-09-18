@@ -18,3 +18,20 @@ function counter(){
 
 let c = counter();
 console.log(c());
+console.log(c());
+console.log(c());
+
+//Create a pure function to transform a value
+function transform(val){
+    return val*2;
+}
+
+console.log(transform(3));
+
+//IIFE to restrict the variable
+(function (){
+    const password = "secret password";
+    console.log(password);
+})();
+
+console.log(password);
