@@ -42,5 +42,39 @@ let obj2 = {...obj1}; //creating clone of obj1
 let obj3 = Object.assign({},obj1);  //Object Assign
 
 
- //Deep Cloning (Very Imp)
- 
+//Deep Cloning (Very Imp)
+//Problem with normal cloning 
+/**let obj4 = {
+    name:"Himanshu",
+    address:{
+        city:"Pune",
+        area:"Bibwewadi"
+    },
+    college:"VIT"
+}
+ let obj5 = {...obj4};
+ obj5.address.area = "Kothrud";**/
+//the problem in the above code is whenever we change anything in the obj5 that will also reflect in obj4
+let obj4 = {
+    name:"Himanshu",
+    address:{
+        city:"Pune",
+        area:"Bibwewadi"
+    },
+    college:"VIT"
+}
+let obj5 = JSON.parse(JSON.stringify(obj)); //deep cloning
+
+
+//Optional chaining and computational properties
+let role = "admin";
+
+let obj9 = {
+    name: "Harsh",
+    age : "26",
+    email :"test@test.com",
+    addresses:{
+        city:"Pune"
+    },
+    [role]:"xyc",
+};   
