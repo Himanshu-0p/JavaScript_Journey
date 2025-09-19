@@ -31,3 +31,27 @@ const user = {
 
 // Using bracket notation to access the "first-name" key.
 console.log(user["first-name"]); // This will print "Harsh"
+
+//given a dynamic key let key = "age" how will u access user[key]
+let key = "age";    
+const user1 = {
+    age: "26",
+}
+
+//From the object below print value of lattitude
+const location1 ={
+    city:"Pune",
+    coordinates:{
+        lat:23.2,
+        lng:77.4
+    }
+}
+
+//Use Object.entries() to print all key value
+const course ={
+    title:"JavaScript",
+    duration:"4 weeks",
+};
+Object.entries(course).forEach(function(val){
+    console.log(val[0]+": "+val[1]);
+});
